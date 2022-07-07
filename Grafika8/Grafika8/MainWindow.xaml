@@ -1,0 +1,35 @@
+﻿<Window x:Class="Grafika8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grafika8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="LightSlateGray" Margin="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="10*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" BorderThickness="2" BorderBrush="Black" Margin="5" Background="Gray">
+            <StackPanel>
+                <Separator Margin="5"></Separator>
+                <Button Margin="10 5 10 5" Click="Load_image">Wczytaj obrazek</Button>
+                <Separator Margin="5"></Separator>
+                <Button Margin="10 5 10 5" Click="Dilation_button">Dylatacja</Button>
+                <Separator Margin="5"></Separator>
+                <Button Margin="10 5 10 5" Click="Erozja_button">Erozja</Button>
+                <Separator Margin="5"></Separator>
+                <Button Margin="10 5 10 5" Click="Otwarcie_button">Otwarcie</Button>
+                <Separator Margin="5"></Separator>
+                <Button Margin="10 5 10 5" Click="Domkniecie_button">Domkniecie</Button>
+                <Separator Margin="5"></Separator>
+                <Button Margin="10 5 10 5" Click="Hom">Hit-or-miss</Button>
+                <Separator Margin="5"></Separator>
+            </StackPanel>
+        </Border>
+        <Grid Grid.Column="1" Margin="5">
+            <Image Name="Image_placeholder" Margin="5" RenderOptions.BitmapScalingMode="NearestNeighbor"></Image>
+        </Grid>
+    </Grid>
+</Window>
